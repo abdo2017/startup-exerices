@@ -66,10 +66,12 @@ class Startup
 	end
 
 	def acquire(startup)
+
+
 		@funding += startup.funding
 
 		startup.salaries.each do |title,salary|
-			if !@salariesd.has_key?(title)
+			if !@salaries.has_key?(title)
 				@salaries[title] = salary
 			end
 		end
